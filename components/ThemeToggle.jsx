@@ -3,8 +3,10 @@ import { SunIcon, MoonIcon } from 'lucide-react';
 import './ThemeToggle.css';
 
 const ThemeToggle = () => {
-  const [theme, setTheme] = useState<'light' | 'dark'>(
-    localStorage.getItem('theme') === 'dark' ? 'dark' : 'light'
+  const [theme, setTheme] = useState(
+    typeof window !== 'undefined' && localStorage.getItem('theme') === 'dark'
+      ? 'dark'
+      : 'light'
   );
 
   useEffect(() => {

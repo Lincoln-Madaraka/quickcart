@@ -19,7 +19,6 @@ const Navbar = () => {
         alt="logo"
       />
       <div className="flex items-center gap-4 lg:gap-8 max-md:hidden">
-        <ThemeToggle />
         <Link href="/" className="hover:text-gray-900 transition">
           Home
         </Link>
@@ -35,6 +34,7 @@ const Navbar = () => {
 
         {isSeller && <button onClick={() => router.push('/seller')} className="text-xs border px-4 py-1.5 rounded-full">Seller Dashboard</button>}
 
+         <ThemeToggle />
       </div>
 
       <ul className="hidden md:flex items-center gap-4 ">
