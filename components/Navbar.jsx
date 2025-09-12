@@ -4,6 +4,7 @@ import { assets} from "@/assets/assets";
 import Link from "next/link"
 import { useAppContext } from "@/context/AppContext";
 import Image from "next/image";
+import ThemeToggle from '@/components/ThemeToggle';
 
 const Navbar = () => {
 
@@ -18,6 +19,7 @@ const Navbar = () => {
         alt="logo"
       />
       <div className="flex items-center gap-4 lg:gap-8 max-md:hidden">
+        <ThemeToggle />
         <Link href="/" className="hover:text-gray-900 transition">
           Home
         </Link>
