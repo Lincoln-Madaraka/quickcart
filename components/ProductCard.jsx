@@ -32,7 +32,7 @@ const ProductCard = ({ product }) => {
             <p className="md:text-base font-medium pt-2 w-full truncate dark:text-yellow-200">{product.name}</p>
             <p className="w-full text-xs text-gray-500/70 max-sm:hidden truncate dark:text-white">{product.description}</p>
             <div className="flex items-center gap-2">
-                <p className="text-xs">{4.5}</p>
+                <p className="text-xs dark:text-orange-600">{4.5}</p>
                 <div className="flex items-center gap-0.5">
                     {Array.from({ length: 5 }).map((_, index) => (
                         <Image
@@ -50,8 +50,8 @@ const ProductCard = ({ product }) => {
             </div>
 
             <div className="flex items-end justify-between w-full mt-1">
-                <p className="text-base font-medium">{currency}{product.offerPrice}</p>
-                <button className=" max-sm:hidden px-4 py-1.5 text-gray-500 border border-gray-500/20 rounded-full text-xs hover:bg-slate-50 transition">
+                <p className="text-base font-medium dark:text-white">{currency}{product.offerPrice}</p>
+                <button className=" max-sm:hidden px-4 py-1.5 text-gray-500 border border-gray-500/20 dark:border-gray-200 dark:hover:bg-black rounded-full text-xs hover:bg-slate-50 transition dark:text-white">
                     Buy now
                 </button>
             </div>
