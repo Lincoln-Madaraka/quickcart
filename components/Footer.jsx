@@ -4,8 +4,8 @@ import Image from "next/image";
 
 const Footer = () => {
   return (
-    <footer>
-      <div className="flex flex-col md:flex-row items-start justify-center px-6 md:px-16 lg:px-32 gap-10 py-14 border-b border-gray-500/30 text-gray-500">
+    <footer className="bg-gray-100 dark:bg-gray-900">
+      <div className="flex flex-col md:flex-row items-start justify-center px-6 md:px-16 lg:px-32 gap-10 py-14 border-b border-gray-500/30 text-gray-500 dark:text-gray-400">
         <div className="w-4/5">
           <Image className="w-28 md:w-32 block dark:hidden" src={assets.logo} alt="logo" />
            <Image className="w-28 md:w-32 hidden dark:block" src={assets.logo_dark} alt="logo" />
@@ -46,7 +46,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <p className="py-4 text-center text-xs md:text-sm">
+      <p className="py-4 text-center text-xs md:text-sm dark:text-gray-400 text-gray-500">
         Copyright 2025 © QuickCart. All Right Reserved.
       </p>
     </footer>
