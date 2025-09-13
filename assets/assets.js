@@ -2,7 +2,6 @@ import logo from "./logo.svg";
 import search_icon from "./search_icon.svg";
 import user_icon from "./user_icon.svg";
 import search_dark from "./search_dark.svg";
-import logo_dark from "./logo_dark.jpg";
 import user_dark from "./user_dark.svg";
 import cart_icon from "./cart_icon.svg";
 import add_icon from "./add_icon.svg";
@@ -73,7 +72,6 @@ export const assets = {
   arrow_icon_white,
   heart_icon,
   star_icon,
-  logo_dark,
   redirect_icon,
   star_dull_icon,
   header_headphone_image,

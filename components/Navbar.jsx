@@ -22,20 +22,19 @@ const Navbar = () => {
         src={assets.logo}
         alt="logo"
       />
-      <Image
-        src="/favicon-dark.ico" // optional dark version if you have it
-        alt="QuickCart Logo Q Dark"
-        width={34}
-        height={34}
-        className="hidden dark:block"
-      />
-
-      {/* Rest of the word */}
-      <span
-        className={`${lexend.className} ml-1 text-2xl font-semibold tracking-tight hidden dark:block`}
-      >
-        uickCart
-      </span>
+      <div className="hidden dark:flex items-center">
+        <Image
+          src="/favicon.png"
+          alt="QuickCart Logo"
+          width={34}
+          height={34}
+        />
+        <span
+          className={`${lexend.className} ml-0 text-2xl font-semibold tracking-tight`}
+        >
+          uickCart
+        </span>
+      </div>
       <div className="flex items-center gap-4 lg:gap-8 max-md:hidden">
         <Link href="/" className="hover:text-gray-900 transition">
           Home
