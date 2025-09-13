@@ -6,6 +6,9 @@ import { useAppContext } from "@/context/AppContext";
 import Image from "next/image";
 import ThemeToggle from '@/components/ThemeToggle';
 
+
+const lexend = Lexend({ subsets: ["latin"], weight: ["400", "600"] });
+
 const Navbar = () => {
 
   const { isSeller, router } = useAppContext();
@@ -19,11 +22,19 @@ const Navbar = () => {
         alt="logo"
       />
       <Image
-        className="cursor-pointer w-28 md:w-32 hidden dark:block"
-        onClick={() => router.push('/')}
-        src={assets.logo_dark}
-        alt="logo"
+        src="/favicon-dark.ico" // optional dark version if you have it
+        alt="QuickCart Logo Q Dark"
+        width={34}
+        height={34}
+        className="hidden dark:block"
       />
+
+      {/* Rest of the word */}
+      <span
+        className={`${lexend.className} ml-1 text-2xl font-semibold tracking-tight hidden dark:block`}
+      >
+        uickCart
+      </span>
       <div className="flex items-center gap-4 lg:gap-8 max-md:hidden">
         <Link href="/" className="hover:text-gray-900 transition">
           Home
