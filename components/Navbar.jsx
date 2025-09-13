@@ -13,9 +13,15 @@ const Navbar = () => {
   return (
     <nav className="flex items-center justify-between px-6 md:px-16 lg:px-32 py-3 border-b border-gray-300 text-gray-700 dark:text-gray-200 dark:border-gray-600 dark:bg-gray-900">
       <Image
-        className="cursor-pointer w-28 md:w-32"
+        className="cursor-pointer w-28 md:w-32 block dark:hidden"
         onClick={() => router.push('/')}
         src={assets.logo}
+        alt="logo"
+      />
+      <Image
+        className="cursor-pointer w-28 md:w-32 hidden dark:block"
+        onClick={() => router.push('/')}
+        src={assets.logo_dark}
         alt="logo"
       />
       <div className="flex items-center gap-4 lg:gap-8 max-md:hidden">
