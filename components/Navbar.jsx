@@ -5,6 +5,7 @@ import Link from "next/link"
 import { useAppContext } from "@/context/AppContext";
 import Image from "next/image";
 import ThemeToggle from '@/components/ThemeToggle';
+import { Lexend } from "next/font/google";
 
 
 const lexend = Lexend({ subsets: ["latin"], weight: ["400", "600"] });
