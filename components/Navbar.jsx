@@ -11,7 +11,7 @@ const Navbar = () => {
   const { isSeller, router } = useAppContext();
 
   return (
-    <nav className="flex items-center justify-between px-6 md:px-16 lg:px-32 py-3 border-b border-gray-300 text-gray-700 dark:text-gray-200 dark:border-gray-600 dark:bg-gray-900">
+    <nav className="flex items-center justify-between px-6 md:px-16 lg:px-32 py-3 border-b border-gray-300 text-gray-700 dark:text-gray-200 dark:border-gray-600 dark:bg-black">
       <Image
         className="cursor-pointer w-28 md:w-32 block dark:hidden"
         onClick={() => router.push('/')}
@@ -79,7 +79,16 @@ const Navbar = () => {
       <div className="flex items-center md:hidden gap-3">
         {isSeller && <button onClick={() => router.push('/seller')} className="text-xs border px-4 py-1.5 rounded-full">Seller Dashboard</button>}
         <button className="flex items-center gap-2 hover:text-gray-900 transition">
-          <Image src={assets.user_icon} alt="user icon" />
+           <Image
+              src={assets.user_icon}
+              alt="user icon light"
+              className="w-4 h-4 block dark:hidden"
+            />
+            <Image
+              src={assets.user_dark}
+              alt="user icon dark"
+              className="w-4 h-4 hidden dark:block"
+            />
           Account
         </button>
       </div>
