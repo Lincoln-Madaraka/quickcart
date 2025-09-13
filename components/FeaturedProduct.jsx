@@ -25,7 +25,7 @@ const products = [
 
 const FeaturedProduct = () => {
   return (
-    <div className="mt-14 dark:bg-gray-900 bg-gray-100 pb-14 pt-10">
+    <div className="mt-14 dark:bg-gray-800 bg-gray-100 pb-14 pt-10">
       <div className="flex flex-col items-center">
         <p className="text-3xl font-medium dark:text-white">Featured Products</p>
         <div className="w-28 h-0.5 bg-orange-600 mt-2"></div>
