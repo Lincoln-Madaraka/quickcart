@@ -3,7 +3,6 @@ import React, { useEffect, useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 
-// Import your images directly
 import addIcon from '../../assets/add_icon.svg'
 import productListIcon from '../../assets/product_list_icon.svg'
 import orderIcon from '../../assets/order_icon.svg'

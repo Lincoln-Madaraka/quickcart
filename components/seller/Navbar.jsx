@@ -6,7 +6,6 @@ import Image from 'next/image'
 import { useAppContext } from '@/context/AppContext'
 import { Lexend } from "next/font/google";
 
-
 const lexend = Lexend({ subsets: ["latin"], weight: ["400", "600"] });
 
 const Navbar = () => {
@@ -18,15 +17,12 @@ const Navbar = () => {
 
   return (
  <div className='flex items-center px-4 md:px-8 py-3 justify-between border-b dark:bg-gray-800'>
-  {/* Light mode logo */}
   <Image
     onClick={() => router.push('/')}
     className='w-28 lg:w-32 cursor-pointer block dark:hidden'
     src={assets.logo}
     alt="QuickCart Logo Light"
   />
-
-  {/* Dark mode logo */}
   <div className="hidden dark:flex items-center">
     <Image
       src="/favicon.png"
@@ -44,5 +40,4 @@ const Navbar = () => {
     </div>
   )
 }
-
 export default Navbar

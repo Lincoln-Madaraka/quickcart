@@ -10,13 +10,9 @@ const Footer = () => {
           <Image className="w-28 md:w-32 block dark:hidden" src={assets.logo} alt="logo" />
            <Image className="w-28 md:w-32 hidden dark:block" src={assets.logo_dark} alt="logo" />
           <p className="mt-6 text-sm">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book.
+            Lorem 
           </p>
         </div>
-
         <div className="w-1/2 flex items-center justify-start md:justify-center">
           <div>
             <h2 className="font-medium text-gray-900 mb-5 dark:text-orange-400">Company</h2>
