@@ -15,6 +15,7 @@ const Navbar = () => {
   return (
     <div className='flex items-center px-4 md:px-8 py-3 justify-between border-b dark:bg-gray-800'>
       <Image onClick={()=>router.push('/')} className='w-28 lg:w-32 cursor-pointer dark:hidden block' src={assets.logo} alt="" />
+      <div className="hidden dark:flex items-center">
               <Image
                 src="/favicon.png"
                 alt="QuickCart Logo"
@@ -23,6 +24,18 @@ const Navbar = () => {
               />
               <span
                 className={`${lexend.className} ml-0 text-2xl font-semibold tracking-tight`}
+              >
+                uickCart
+              </span>
+            </div>
+              <Image
+                src="/favicon.png"
+                alt="QuickCart Logo"
+                width={34}
+                height={34}
+              />
+              <span
+                className={`${lexend.className} ml-0 text-2xl font-semibold tracking-tight hidden dark:block`}
               >
                 uickCart
               </span>
