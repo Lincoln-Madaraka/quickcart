@@ -18,5 +18,4 @@ const HomeProducts = () => {
     </div>
   );
 };
-
 export default HomeProducts;

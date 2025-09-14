@@ -16,23 +16,22 @@ const Footer = () => {
         <div className="w-1/2 flex items-center justify-start md:justify-center">
           <div>
             <h2 className="font-medium text-gray-900 mb-5 dark:text-orange-400">Company</h2>
-            <ul className="text-sm space-y-2">
-              <li>
-                <a className="hover:underline transition" href="#">Home</a>
-              </li>
-              <li>
-                <a className="hover:underline transition" href="#">About us</a>
-              </li>
-              <li>
-                <a className="hover:underline transition" href="#">Contact us</a>
-              </li>
-              <li>
-                <a className="hover:underline transition" href="#">Privacy policy</a>
-              </li>
-            </ul>
+              <ul className="text-sm space-y-2">
+                    <li>
+                      <a className="hover:underline transition" href="#">Home</a>
+                    </li>
+                    <li>
+                      <a className="hover:underline transition" href="#">About us</a>
+                    </li>
+                    <li>
+                      <a className="hover:underline transition" href="#">Contact us</a>
+                    </li>
+                    <li>
+                      <a className="hover:underline transition" href="#">Privacy policy</a>
+                    </li>
+              </ul>
           </div>
         </div>
-
         <div className="w-1/2 flex items-start justify-start md:justify-center">
           <div>
             <h2 className="font-medium text-gray-900 mb-5 dark:text-orange-400">Get in touch</h2>
@@ -43,10 +42,8 @@ const Footer = () => {
         </div>
       </div>
       <p className="py-4 text-center text-xs md:text-sm dark:text-gray-400 text-gray-500">
-        Copyright 2025 © QuickCart. All Right Reserved.
-      </p>
+        Copyright 2025 © QuickCart. All Right Reserved.</p>
     </footer>
   );
 };
-
 export default Footer;
