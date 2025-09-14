@@ -1,3 +1,5 @@
+"use client"
+
 import React from 'react'
 import { assets } from '../../assets/assets'
 import Image from 'next/image'
@@ -9,8 +11,11 @@ import { Lexend } from "next/font/google";
 const lexend = Lexend({ subsets: ["latin"], weight: ["400", "600"] });
 
 const Navbar = () => {
-
   const { router } = useAppContext()
+  const [mounted, setMounted] = useState(false)
+
+  useEffect(() => setMounted(true), [])
+  if (!mounted) return null
 
   return (
  <div className='flex items-center px-4 md:px-8 py-3 justify-between border-b dark:bg-gray-800'>
