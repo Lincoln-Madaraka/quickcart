@@ -1,4 +1,5 @@
-import React from 'react';
+'use client'
+import React, { useEffect, useState } from 'react'
 import Link from 'next/link';
 import { assets } from '../../assets/assets';
 import Image from 'next/image';
@@ -6,6 +7,12 @@ import { usePathname } from 'next/navigation';
 
 const SideBar = () => {
     const pathname = usePathname()
+    const [mounted, setMounted] = useState(false)
+
+    // Wait for client-side hydration
+    useEffect(() => setMounted(true), [])
+    if (!mounted) return null  // prevents flashing light mode
+
     const menuItems = [
         { name: 'Add Product', path: '/seller', icon: assets.add_icon },
         { name: 'Product List', path: '/seller/product-list', icon: assets.product_list_icon },
