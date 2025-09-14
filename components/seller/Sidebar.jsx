@@ -1,0 +1,57 @@
+'use client'
+import React, { useEffect, useState } from 'react'
+import Link from 'next/link'
+import Image from 'next/image'
+
+// Import your images directly
+import addIcon from '../../assets/add_icon.svg'
+import productListIcon from '../../assets/product_list_icon.svg'
+import orderIcon from '../../assets/order_icon.svg'
+
+const SideBar = () => {
+  const [mounted, setMounted] = useState(false)
+  const [pathname, setPathname] = useState('')
+
+  useEffect(() => {
+    setMounted(true)
+    setPathname(window.location.pathname) // get current path
+  }, [])
+
+  if (!mounted) return null
+
+  const menuItems = [
+    { name: 'Add Product', path: '/seller', icon: addIcon },
+    { name: 'Product List', path: '/seller/product-list', icon: productListIcon },
+    { name: 'Orders', path: '/seller/orders', icon: orderIcon },
+  ]
+
+  return (
+    <div className='md:w-64 w-16 border-r min-h-screen text-base border-gray-300 py-2 flex flex-col dark:border-gray-600 dark:bg-gray-900 bg-gray-100'>
+      {menuItems.map((item) => {
+        const isActive = pathname === item.path
+        return (
+          <Link href={item.path} key={item.name} passHref>
+            <div
+              className={`flex items-center py-3 px-4 gap-3 ${
+                isActive
+                  ? "border-r-4 md:border-r-[6px] bg-blue-900 text-white border-blue-500 dark:bg-blue-800 dark:border-blue-400"
+                  : "hover:bg-gray-100/90 dark:hover:bg-gray-800 border-white dark:text-gray-200"
+              }`}
+            >
+              <Image
+                src={item.icon}
+                alt={`${item.name.toLowerCase()}_icon`}
+                width={28}
+                height={28}
+                className="w-7 h-7"
+              />
+              <p className='md:block hidden text-center'>{item.name}</p>
+            </div>
+          </Link>
+        )
+      })}
+    </div>
+  )
+}
+
+export default SideBar
