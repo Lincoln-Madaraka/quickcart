@@ -1,6 +1,9 @@
 import React from "react";
 import { assets } from "@/assets/assets";
 import Image from "next/image";
+import { Lexend } from "next/font/google";
+
+const lexend = Lexend({ subsets: ["latin"], weight: ["400", "600"] });
 
 const Footer = () => {
   return (
@@ -22,7 +25,7 @@ const Footer = () => {
                   </span>
                 </div>
           <p className="mt-6 text-sm">
-            Lorem 
+            QuickCart Commerce
           </p>
         </div>
         <div className="w-1/2 flex items-center justify-start md:justify-center">
