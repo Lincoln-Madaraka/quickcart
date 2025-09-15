@@ -124,13 +124,13 @@ const Product = () => {
             </div>
             <div className="flex flex-col items-center">
                 <div className="flex flex-col items-center mb-4 mt-16">
-                    <p className="text-3xl font-medium">Featured <span className="font-medium text-orange-600">Products</span></p>
+                    <p className="text-3xl font-medium dark:text-white">Featured <span className="font-medium text-orange-600">Products</span></p>
                     <div className="w-28 h-0.5 bg-orange-600 mt-2"></div>
                 </div>
                 <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6 mt-6 pb-14 w-full">
                     {products.slice(0, 5).map((product, index) => <ProductCard key={index} product={product} />)}
                 </div>
-                <button className="px-8 py-2 mb-16 border rounded text-gray-500/70 hover:bg-slate-50/90 transition dark:text-white">
+                <button className="px-8 py-2 mb-16 border rounded text-gray-500/70 hover:bg-slate-50/90 transition dark:text-white dark:hover:text-black">
                     See more
                 </button>
             </div>
