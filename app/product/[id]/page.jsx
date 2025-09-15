@@ -48,7 +48,7 @@ const Product = () => {
                             <div
                                 key={index}
                                 onClick={() => setMainImage(image)}
-                                className="cursor-pointer rounded-lg overflow-hidden bg-gray-500/10"
+                                className="cursor-pointer rounded-lg overflow-hidden bg-gray-500/10 dark:bg-gray-300"
                             >
                                 <Image
                                     src={image}
