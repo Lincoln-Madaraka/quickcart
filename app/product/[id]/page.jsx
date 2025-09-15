@@ -30,10 +30,10 @@ const Product = () => {
 
     return productData ? (<>
         <Navbar />
-        <div className="px-6 md:px-16 lg:px-32 pt-14 space-y-10">
+        <div className="px-6 md:px-16 lg:px-32 pt-14 space-y-10 dark:bg-gray-900">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
                 <div className="px-5 lg:px-16 xl:px-20">
-                    <div className="rounded-lg overflow-hidden bg-gray-500/10 mb-4">
+                    <div className="rounded-lg overflow-hidden bg-gray-500/10 mb-4 dark:bg-gray-300">
                         <Image
                             src={mainImage || productData.image[0]}
                             alt="alt"
@@ -64,7 +64,7 @@ const Product = () => {
                 </div>
 
                 <div className="flex flex-col">
-                    <h1 className="text-3xl font-medium text-gray-800/90 mb-4">
+                    <h1 className="text-3xl font-medium text-gray-800/90 mb-4 dark:text-white">
                         {productData.name}
                     </h1>
                     <div className="flex items-center gap-2">
@@ -79,12 +79,12 @@ const Product = () => {
                                 alt="star_dull_icon"
                             />
                         </div>
-                        <p>(4.5)</p>
+                        <p className="dark:text-white">(4.5)</p>
                     </div>
-                    <p className="text-gray-600 mt-3">
+                    <p className="text-gray-600 mt-3 dark:text-gray-200">
                         {productData.description}
                     </p>
-                    <p className="text-3xl font-medium mt-6">
+                    <p className="text-3xl font-medium mt-6 dark:text-orange-400">
                         ${productData.offerPrice}
                         <span className="text-base font-normal text-gray-800/60 line-through ml-2">
                             ${productData.price}

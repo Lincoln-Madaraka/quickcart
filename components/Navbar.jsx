@@ -36,7 +36,7 @@ const Navbar = () => {
         </span>
       </div>
       <div className="flex items-center gap-4 lg:gap-8 max-md:hidden">
-        <Link href="/" className="hover:text-gray-900 transition">
+        <Link href="/" className="hover:text-gray-900 transition ">
           Home
         </Link>
         <Link href="/all-products" className="hover:text-gray-900 transition">
