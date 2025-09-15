@@ -36,16 +36,13 @@ const Navbar = () => {
         </span>
       </div>
       <div className="flex items-center gap-4 lg:gap-8 max-md:hidden">
-        <Link href="/" className="hover:text-gray-900 transition ">
+        <Link href="/" className="hover:text-gray-900 transition dark:hover:text-orange-600">
           Home
         </Link>
-        <Link href="/all-products" className="hover:text-gray-900 transition">
+        <Link href="/all-products" className="hover:text-gray-900 transition dark:hover:text-orange-600">
           Shop
         </Link>
-        <Link href="/" className="hover:text-gray-900 transition">
-          About Us
-        </Link>
-        <Link href="/" className="hover:text-gray-900 transition">
+        <Link href="/contact" className="hover:text-gray-900 transition dark:hover:text-orange-600">
           Contact
         </Link>
 
