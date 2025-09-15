@@ -22,6 +22,26 @@ export const AppContextProvider = (props) => {
     const fetchProductData = async () => {
         setProducts(productsDummyData)
     }
+    
+    const [theme, setTheme] = useState('light'); // default theme
+    
+    useEffect(() => {
+        const storedTheme = localStorage.getItem('theme'); // read saved theme
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches; // system preference
+
+        if (storedTheme) setTheme(storedTheme);
+        else if (prefersDark) setTheme('dark');
+        else setTheme('light');
+        }, []);
+
+    useEffect(() => {
+        const root = document.documentElement;
+        if (theme === 'dark') root.classList.add('dark');
+        else root.classList.remove('dark');
+
+        localStorage.setItem('theme', theme);
+        }, [theme]);
+
 
     const fetchUserData = async () => {
         setUserData(userDummyData)
@@ -88,7 +108,9 @@ export const AppContextProvider = (props) => {
         products, fetchProductData,
         cartItems, setCartItems,
         addToCart, updateCartQuantity,
-        getCartCount, getCartAmount
+        getCartCount, getCartAmount,
+        theme, 
+        setTheme  
     }
 
     return (

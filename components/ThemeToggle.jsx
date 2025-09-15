@@ -1,25 +1,22 @@
-import { useEffect, useState } from 'react';
-import { SunIcon, MoonIcon } from 'lucide-react';
-import './ThemeToggle.css';
+"use client";
+
+import { SunIcon, MoonIcon } from "lucide-react";
+import { useAppContext } from "@/context/AppContext"; // ✅ import context
+import "./ThemeToggle.css";
 
 const ThemeToggle = () => {
-  const [theme, setTheme] = useState(
-    typeof window !== 'undefined' && localStorage.getItem('theme') === 'dark'
-      ? 'dark'
-      : 'light'
-  );
+  // 1️⃣ Access global theme state from context
+  const { theme, setTheme } = useAppContext();
 
-  useEffect(() => {
-    document.documentElement.classList.toggle('dark', theme === 'dark');
-    localStorage.setItem('theme', theme);
-  }, [theme]);
+  // 2️⃣ Toggle theme function
+  const toggleTheme = () => setTheme(theme === "light" ? "dark" : "light");
 
-  const toggleTheme = () => {
-    setTheme((prev) => (prev === 'light' ? 'dark' : 'light'));
-  };
-
+  // 3️⃣ Render button with icons
   return (
-    <button onClick={toggleTheme} className={`theme-toggle ${theme}`}>
+    <button
+      onClick={toggleTheme}
+      className={`theme-toggle ${theme}`} // apply theme class for CSS styling
+    >
       <span className="icon sun">
         <SunIcon className="w-4 h-4" />
       </span>
