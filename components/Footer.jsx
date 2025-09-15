@@ -8,7 +8,19 @@ const Footer = () => {
       <div className="flex flex-col md:flex-row items-start justify-center px-6 md:px-16 lg:px-32 gap-10 py-14 border-b border-gray-500/30 text-gray-500 dark:text-gray-400">
         <div className="w-4/5">
           <Image className="w-28 md:w-32 block dark:hidden" src={assets.logo} alt="logo" />
-           <Image className="w-28 md:w-32 hidden dark:block" src={assets.logo_dark} alt="logo" />
+          <div className="hidden dark:flex items-center">
+                  <Image
+                    src="/favicon.png"
+                    alt="QuickCart Logo"
+                    width={34}
+                    height={34}
+                  />
+                  <span
+                    className={`${lexend.className} ml-0 text-2xl font-semibold tracking-tight`}
+                  >
+                    uickCart
+                  </span>
+                </div>
           <p className="mt-6 text-sm">
             Lorem 
           </p>
