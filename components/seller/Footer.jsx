@@ -8,7 +8,7 @@ const Footer = () => {
       <div className="flex items-center gap-4">
         <Image className="hidden md:block" src={assets.logo} alt="logo" />
         <div className="hidden md:block h-7 w-px bg-gray-500/60"></div>
-        <p className="py-4 text-center text-xs md:text-sm text-gray-500">
+        <p className="py-4 text-center text-xs md:text-sm text-gray-500 dark:text-gray-200">
           Copyright 2025 © QuickCart All Right Reserved.
         </p>
       </div>
