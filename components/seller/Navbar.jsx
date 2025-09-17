@@ -23,7 +23,9 @@ const Navbar = () => {
     src={assets.logo}
     alt="QuickCart Logo Light"
   />
-  <div className="hidden dark:flex items-center">
+  <div className="hidden dark:flex items-center cursor-pointer"
+  onClick={() => router.push('/')}
+  >
     <Image
       src="/favicon.png"
       alt="QuickCart Logo Dark"
