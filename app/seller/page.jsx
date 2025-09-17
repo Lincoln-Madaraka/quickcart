@@ -18,10 +18,10 @@ const AddProduct = () => {
   };
 
   return (
-    <div className="flex-1 min-h-screen flex flex-col justify-between">
+    <div className="flex-1 min-h-screen flex flex-col justify-between dark:bg-gray-900">
       <form onSubmit={handleSubmit} className="md:p-10 p-4 space-y-5 max-w-lg">
         <div>
-          <p className="text-base font-medium">Product Image</p>
+          <p className="text-base font-medium dark:text-white">Product Image</p>
           <div className="flex flex-wrap items-center gap-3 mt-2">
 
             {[...Array(4)].map((_, index) => (
@@ -45,7 +45,7 @@ const AddProduct = () => {
           </div>
         </div>
         <div className="flex flex-col gap-1 max-w-md">
-          <label className="text-base font-medium" htmlFor="product-name">
+          <label className="text-base font-medium dark:text-white" htmlFor="product-name">
             Product Name
           </label>
           <input
@@ -60,7 +60,7 @@ const AddProduct = () => {
         </div>
         <div className="flex flex-col gap-1 max-w-md">
           <label
-            className="text-base font-medium"
+            className="text-base font-medium dark:text-white"
             htmlFor="product-description"
           >
             Product Description
@@ -77,7 +77,7 @@ const AddProduct = () => {
         </div>
         <div className="flex items-center gap-5 flex-wrap">
           <div className="flex flex-col gap-1 w-32">
-            <label className="text-base font-medium" htmlFor="category">
+            <label className="text-base font-medium dark:text-white" htmlFor="category">
               Category
             </label>
             <select
@@ -96,7 +96,7 @@ const AddProduct = () => {
             </select>
           </div>
           <div className="flex flex-col gap-1 w-32">
-            <label className="text-base font-medium" htmlFor="product-price">
+            <label className="text-base font-medium dark:text-white" htmlFor="product-price">
               Product Price
             </label>
             <input
@@ -110,7 +110,7 @@ const AddProduct = () => {
             />
           </div>
           <div className="flex flex-col gap-1 w-32">
-            <label className="text-base font-medium" htmlFor="offer-price">
+            <label className="text-base font-medium dark:text-white" htmlFor="offer-price">
               Offer Price
             </label>
             <input
